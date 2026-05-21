@@ -31,17 +31,17 @@
 .allin-btn-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.15) 0%,transparent 60%);pointer-events:none;transition:all .5s cubic-bezier(.16,1,.3,1);z-index:1}
 .allin-btn:hover .allin-btn-bigicon svg{transform:scale(1.1) rotate(-3deg)}
 .allin-btn:hover .allin-btn-glow{width:120px;height:120px;background:radial-gradient(circle,rgba(255,255,255,.22) 0%,transparent 60%)}
-.allin-btn-swipe .allin-btn-bigicon svg{color:#f5d77a;filter:drop-shadow(0 4px 20px rgba(245,215,122,.5))}
-.allin-btn-swipe .allin-btn-glow{background:radial-gradient(circle,rgba(255,225,150,.3) 0%,transparent 60%)}
-.allin-btn-swipe:hover .allin-btn-glow{background:radial-gradient(circle,rgba(255,225,150,.45) 0%,transparent 60%)}
+.allin-btn-swipe .allin-btn-bigicon svg{color:#c9a84c;filter:drop-shadow(0 4px 20px rgba(201,168,76,.45))}
+.allin-btn-swipe .allin-btn-glow{background:radial-gradient(circle,rgba(201,168,76,.25) 0%,transparent 60%)}
+.allin-btn-swipe:hover .allin-btn-glow{background:radial-gradient(circle,rgba(201,168,76,.4) 0%,transparent 60%)}
 .allin-btn-text{display:flex;flex-direction:column;gap:4px;width:100%}
 .allin-btn-title{font-size:15px;font-weight:600;color:#fff;letter-spacing:-.015em;line-height:1.2}
 .allin-btn-sub{font-size:11px;font-weight:500;color:rgba(255,255,255,.6);letter-spacing:.01em;line-height:1.3}
 .allin-btn:hover{transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,.3),0 16px 40px rgba(0,0,0,.25)}
 
 /* Swipe Files — azul biblioteca + acento dourado */
-.allin-btn-swipe{background:linear-gradient(135deg,#8a6f2e 0%,#4d3f1c 55%,#2a2412 100%)}
-.allin-btn-swipe::before{content:"";position:absolute;top:-50%;right:-30%;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(255,220,140,.18) 0%,transparent 70%);pointer-events:none}
+.allin-btn-swipe{background:linear-gradient(135deg,#1f2126 0%,#16181c 55%,#0f1114 100%)}
+.allin-btn-swipe::before{content:"";position:absolute;top:-50%;right:-30%;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.15) 0%,transparent 70%);pointer-events:none}
 
 /* WhatsApp — verde oficial */
 .allin-btn-whats{background:linear-gradient(135deg,#25D366 0%,#128C7E 100%)}
