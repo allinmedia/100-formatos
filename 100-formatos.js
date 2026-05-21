@@ -22,20 +22,44 @@
 .allin-card-cover:hover .allin-cover-cta{color:#1d1d1f;gap:10px}
 .allin-card-cover:hover .allin-cover-cta svg{transform:translateX(2px)}
 .allin-buttons-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;width:100%;margin-top:16px}
-.allin-button-small{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:22px 18px;background:linear-gradient(180deg,#fff 0%,#f5f5f7 100%);border:1px solid rgba(0,0,0,.06);color:#1d1d1f;font-size:14px;font-weight:500;letter-spacing:-.015em;text-decoration:none;text-align:center;border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 4px 12px rgba(0,0,0,.06);cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;grid-column:span 1;aspect-ratio:1/1}
-.allin-button-small span{line-height:1.3}
-.allin-button-small svg{width:16px;height:16px;transition:transform .4s cubic-bezier(.16,1,.3,1);flex-shrink:0}
-.allin-button-small:hover{transform:translateY(-4px);box-shadow:0 4px 8px rgba(0,0,0,.06),0 16px 32px rgba(0,0,0,.1)}
-.allin-button-small:hover svg{transform:translate(2px,-2px)}
-.allin-button-big{grid-column:span 3;display:flex;align-items:center;justify-content:center;padding:24px 28px;background:linear-gradient(180deg,#1d1d1f 0%,#000 100%);border:1px solid rgba(255,255,255,.08);color:#fff;text-decoration:none;border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 4px 12px rgba(0,0,0,.1);cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;aspect-ratio:auto}
-.allin-button-big-content{display:flex;flex-direction:column;align-items:flex-start;gap:8px;width:100%}
-.allin-button-big-title{font-size:20px;font-weight:600;letter-spacing:-.025em;line-height:1.1;color:#fff}
-.allin-button-big-desc{font-size:13px;line-height:1.5;color:rgba(255,255,255,.7);letter-spacing:-.01em;margin-bottom:6px}
-.allin-button-big-cta{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:#fff;padding:10px 18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:999px;transition:all .3s cubic-bezier(.16,1,.3,1);margin-top:4px}
-.allin-button-big-cta svg{width:14px;height:14px;transition:transform .3s cubic-bezier(.16,1,.3,1)}
-.allin-button-big:hover{transform:translateY(-4px);box-shadow:0 4px 8px rgba(0,0,0,.08),0 16px 32px rgba(0,0,0,.16)}
-.allin-button-big:hover .allin-button-big-cta{background:rgba(255,255,255,.2);gap:10px}
-.allin-button-big:hover .allin-button-big-cta svg{transform:translateX(3px)}
+
+/* Botões pequenos (compartilhado) */
+.allin-btn{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:14px;padding:20px;border-radius:18px;text-decoration:none;cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;grid-column:span 1;aspect-ratio:1/1;overflow:hidden;border:1px solid rgba(255,255,255,.06);box-shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.15)}
+.allin-btn-icon-wrap{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08);flex-shrink:0;transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.allin-btn-icon-wrap svg{width:20px;height:20px;color:#fff}
+.allin-btn-text{display:flex;flex-direction:column;gap:4px;width:100%}
+.allin-btn-title{font-size:15px;font-weight:600;color:#fff;letter-spacing:-.015em;line-height:1.2}
+.allin-btn-sub{font-size:11px;font-weight:500;color:rgba(255,255,255,.6);letter-spacing:.01em;line-height:1.3}
+.allin-btn:hover{transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,.3),0 16px 40px rgba(0,0,0,.25)}
+.allin-btn:hover .allin-btn-icon-wrap{transform:scale(1.08)}
+
+/* Swipe Files — azul biblioteca + acento dourado */
+.allin-btn-swipe{background:linear-gradient(135deg,#1e3a5f 0%,#15294a 50%,#0f1f3a 100%)}
+.allin-btn-swipe::before{content:"";position:absolute;top:-50%;right:-30%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.18) 0%,transparent 70%);pointer-events:none}
+.allin-btn-swipe .allin-btn-icon-wrap{background:rgba(201,168,76,.15);border-color:rgba(201,168,76,.25)}
+.allin-btn-swipe .allin-btn-icon-wrap svg{color:#c9a84c}
+
+/* WhatsApp — verde oficial */
+.allin-btn-whats{background:linear-gradient(135deg,#25D366 0%,#128C7E 100%)}
+.allin-btn-whats::before{content:"";position:absolute;bottom:-40%;left:-20%;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12) 0%,transparent 70%);pointer-events:none}
+.allin-btn-whats .allin-btn-icon-wrap{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.15)}
+
+/* Botão Premium — Conta com a gente */
+.allin-btn-premium{position:relative;grid-column:span 3;display:flex;flex-direction:column;justify-content:space-between;padding:28px 32px;background:linear-gradient(135deg,#1a1a1c 0%,#0a0a0a 100%);border:1px solid rgba(201,168,76,.2);color:#fff;text-decoration:none;border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.3),0 8px 32px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.04);cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;overflow:hidden}
+.allin-btn-premium::before{content:"";position:absolute;top:-50%;right:-20%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 60%);pointer-events:none;transition:opacity .5s}
+.allin-btn-premium-shimmer{position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent 0%,rgba(201,168,76,.08) 50%,transparent 100%);transform:skewX(-20deg);pointer-events:none;animation:allinShimmer 6s ease-in-out infinite}
+@keyframes allinShimmer{0%,100%{left:-100%}50%{left:200%}}
+.allin-btn-premium-content{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;height:100%;justify-content:center}
+.allin-btn-premium-brand{display:flex;align-items:center;gap:12px;margin-bottom:4px}
+.allin-btn-premium-logo{height:36px;width:auto;color:#fff}
+.allin-btn-premium-tag{font-size:9px;font-weight:600;letter-spacing:.18em;color:#c9a84c;padding:4px 10px;border:1px solid rgba(201,168,76,.3);border-radius:999px;background:rgba(201,168,76,.06)}
+.allin-btn-premium-headline{font-size:22px;font-weight:600;letter-spacing:-.025em;line-height:1.1;color:#fff}
+.allin-btn-premium-desc{font-size:13px;line-height:1.5;color:rgba(255,255,255,.65);letter-spacing:-.01em;max-width:520px}
+.allin-btn-premium-cta{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#0a0a0a;padding:11px 22px;background:linear-gradient(180deg,#d4b057 0%,#c9a84c 100%);border:1px solid rgba(201,168,76,.5);border-radius:999px;transition:all .3s cubic-bezier(.16,1,.3,1);margin-top:8px;align-self:flex-start;box-shadow:0 2px 8px rgba(201,168,76,.15)}
+.allin-btn-premium-cta svg{width:14px;height:14px;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.allin-btn-premium:hover{transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,.4),0 24px 48px rgba(201,168,76,.12);border-color:rgba(201,168,76,.35)}
+.allin-btn-premium:hover .allin-btn-premium-cta{background:linear-gradient(180deg,#e0bc63 0%,#d4b057 100%);gap:10px;box-shadow:0 4px 12px rgba(201,168,76,.25)}
+.allin-btn-premium:hover .allin-btn-premium-cta svg{transform:translateX(3px)}
 .allin-modal{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:inherit;-webkit-font-smoothing:antialiased}
 .allin-modal.allin-modal-active{display:flex}
 @keyframes aFI{from{opacity:0}to{opacity:1}}
@@ -62,8 +86,8 @@
 .allin-tab.allin-tab-active{background:#1d1d1f;color:#fff}
 .allin-tab:disabled{opacity:.35;cursor:not-allowed}
 @media (max-width:900px){.allin-cards-grid{grid-template-columns:repeat(4,1fr);gap:14px}}
-@media (max-width:720px){.allin-cards-grid{grid-template-columns:repeat(3,1fr);gap:12px}.allin-buttons-grid{grid-template-columns:repeat(2,1fr);gap:12px}.allin-button-small{aspect-ratio:auto;padding:18px 14px;font-size:13px}.allin-button-big{grid-column:span 2;padding:20px 22px}.allin-button-big-title{font-size:18px}.allin-cover{padding:14px}.allin-cover-badge{width:26px;height:26px;font-size:10px}.allin-cover-tag{font-size:8px;padding:3px 6px}.allin-cover-watermark{font-size:120px}.allin-modal-box{position:relative;z-index:1;width:100%;max-width:460px;max-height:88vh;background:linear-gradient(180deg,#fff 0%,#fafafa 100%);border-radius:20px;padding:24px 30px 28px;box-sizing:border-box;color:#1d1d1f;box-shadow:0 0 0 1px rgba(0,0,0,.05),0 24px 64px rgba(0,0,0,.35);animation:aSU .5s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;overflow:hidden}.allin-modal-title{margin:0;font-size:19px;font-weight:600;color:#1d1d1f;line-height:1.1;letter-spacing:-.025em}.allin-modal-body{flex-direction:column;gap:20px}.allin-modal-right{flex:0 0 auto}.allin-modal-video-container{position:relative;width:100%;max-width:400px;margin:0 auto 14px;aspect-ratio:4/3;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.12);flex-shrink:0}}
-@media (max-width:480px){.allin-cards-grid{grid-template-columns:repeat(2,1fr);gap:10px}.allin-buttons-grid{grid-template-columns:1fr;gap:10px}.allin-button-small{aspect-ratio:auto;padding:16px;flex-direction:row;justify-content:space-between}.allin-button-big{grid-column:span 1}}`;
+@media (max-width:720px){.allin-cards-grid{grid-template-columns:repeat(3,1fr);gap:12px}.allin-buttons-grid{grid-template-columns:repeat(2,1fr);gap:12px}.allin-btn{aspect-ratio:auto;padding:18px;min-height:120px}.allin-btn-premium{grid-column:span 2;padding:22px 24px}.allin-btn-premium-headline{font-size:20px}.allin-btn-premium-logo{height:32px}.allin-cover{padding:14px}.allin-cover-badge{width:26px;height:26px;font-size:10px}.allin-cover-tag{font-size:8px;padding:3px 6px}.allin-cover-watermark{font-size:120px}.allin-modal-box{position:relative;z-index:1;width:100%;max-width:460px;max-height:88vh;background:linear-gradient(180deg,#fff 0%,#fafafa 100%);border-radius:20px;padding:24px 30px 28px;box-sizing:border-box;color:#1d1d1f;box-shadow:0 0 0 1px rgba(0,0,0,.05),0 24px 64px rgba(0,0,0,.35);animation:aSU .5s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;overflow:hidden}.allin-modal-title{margin:0;font-size:19px;font-weight:600;color:#1d1d1f;line-height:1.1;letter-spacing:-.025em}.allin-modal-body{flex-direction:column;gap:20px}.allin-modal-right{flex:0 0 auto}.allin-modal-video-container{position:relative;width:100%;max-width:400px;margin:0 auto 14px;aspect-ratio:4/3;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.12);flex-shrink:0}}
+@media (max-width:480px){.allin-cards-grid{grid-template-columns:repeat(2,1fr);gap:10px}.allin-buttons-grid{grid-template-columns:1fr;gap:10px}.allin-btn{aspect-ratio:auto;padding:16px;min-height:auto;flex-direction:row;align-items:center;justify-content:flex-start}.allin-btn-icon-wrap{width:38px;height:38px}.allin-btn-text{flex:1}.allin-btn-premium{grid-column:span 1;padding:22px 20px}.allin-btn-premium-headline{font-size:18px}.allin-btn-premium-logo{height:28px}}`;
   var html=`<div class="allin-cards-wrapper"><div class="allin-cards-grid">
 <div class="allin-card allin-card-cover" onclick="allinOpen(0)">
 <div class="allin-cover">
@@ -667,19 +691,32 @@
 </div></div>
 </div>
 <div class="allin-buttons-grid">
-<a href="#" target="_blank" rel="noopener noreferrer" class="allin-button-small allin-button-1">
-<span>Acesse a pasta de Swipe Files</span>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7V16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<a href="#" target="_blank" rel="noopener noreferrer" class="allin-btn allin-btn-swipe">
+<div class="allin-btn-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5h4l2 2h7A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10z"/><path d="M7 12h10M7 15.5h6"/></svg></div>
+<div class="allin-btn-text">
+<div class="allin-btn-title">Swipe Files</div>
+<div class="allin-btn-sub">Biblioteca de referências</div>
+</div>
 </a>
-<a href="#" target="_blank" rel="noopener noreferrer" class="allin-button-small allin-button-2">
-<span>Grupo de alunos no WhatsApp</span>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7V16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<a href="#" target="_blank" rel="noopener noreferrer" class="allin-btn allin-btn-whats">
+<div class="allin-btn-icon-wrap"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.379.692 4.595 1.886 6.466L4 29l7.752-1.852A11.93 11.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16.001 3zm0 21.818c-1.755 0-3.4-.473-4.815-1.296l-.345-.205-4.082.975.965-3.987-.224-.357A9.764 9.764 0 0 1 6.182 15c0-5.42 4.4-9.818 9.819-9.818 5.42 0 9.818 4.4 9.818 9.818 0 5.42-4.4 9.818-9.818 9.818zm5.39-7.347c-.295-.148-1.746-.862-2.017-.96-.27-.099-.467-.148-.665.148-.197.295-.762.96-.935 1.158-.172.197-.345.222-.64.074-.295-.148-1.247-.46-2.376-1.466-.878-.783-1.47-1.75-1.643-2.045-.172-.295-.018-.455.13-.602.133-.132.295-.345.443-.517.148-.172.197-.295.295-.492.099-.197.05-.37-.025-.517-.074-.148-.665-1.605-.911-2.198-.24-.578-.484-.5-.665-.51l-.566-.01c-.197 0-.517.074-.787.37-.27.295-1.034 1.01-1.034 2.463 0 1.454 1.058 2.858 1.205 3.054.148.197 2.083 3.181 5.045 4.46.706.305 1.256.487 1.685.624.708.225 1.353.193 1.863.117.568-.085 1.746-.713 1.991-1.4.246-.689.246-1.28.172-1.4-.074-.122-.27-.197-.566-.345z"/></svg></div>
+<div class="allin-btn-text">
+<div class="allin-btn-title">Grupo de Alunos</div>
+<div class="allin-btn-sub">Comunidade no WhatsApp</div>
+</div>
 </a>
-<a href="#" target="_blank" rel="noopener noreferrer" class="allin-button-big allin-button-3">
-<div class="allin-button-big-content">
-<div class="allin-button-big-title">Conta com a gente</div>
-<div class="allin-button-big-desc">Nossa equipe escolhe os formatos certos pro seu perfil, edita, acompanha os dados e ajusta a estratégia com você.</div>
-<div class="allin-button-big-cta"><span>Falar com a equipe</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<a href="#" target="_blank" rel="noopener noreferrer" class="allin-btn-premium">
+<div class="allin-btn-premium-shimmer"></div>
+<div class="allin-btn-premium-content">
+<div class="allin-btn-premium-brand">
+<svg class="allin-btn-premium-logo" viewBox="0 0 200 75" xmlns="http://www.w3.org/2000/svg">
+<text x="100" y="55" text-anchor="middle" font-family="Brush Script MT, cursive" font-size="56" font-weight="400" fill="currentColor" font-style="italic">All In</text>
+</svg>
+<div class="allin-btn-premium-tag">SERVIÇO</div>
+</div>
+<div class="allin-btn-premium-headline">Conta com a gente</div>
+<div class="allin-btn-premium-desc">Nossa equipe escolhe os formatos certos pro seu perfil, edita, acompanha os dados e ajusta a estratégia com você.</div>
+<div class="allin-btn-premium-cta"><span>Falar com a equipe</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
 </div>
 </a>
 </div>
