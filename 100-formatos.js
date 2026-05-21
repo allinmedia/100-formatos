@@ -21,10 +21,21 @@
 .allin-cover-cta svg{width:14px;height:14px;transition:transform .3s cubic-bezier(.16,1,.3,1)}
 .allin-card-cover:hover .allin-cover-cta{color:#1d1d1f;gap:10px}
 .allin-card-cover:hover .allin-cover-cta svg{transform:translateX(2px)}
-.allin-swipe-button{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:16px;padding:22px 24px;background:linear-gradient(180deg,#fff 0%,#f5f5f7 100%);border:1px solid rgba(0,0,0,.06);color:#1d1d1f;font-size:15px;font-weight:500;letter-spacing:-.015em;text-decoration:none;text-align:center;border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 4px 12px rgba(0,0,0,.06);cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box}
-.allin-swipe-button svg{width:16px;height:16px;transition:transform .4s cubic-bezier(.16,1,.3,1)}
-.allin-swipe-button:hover{transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,0,0,.06),0 16px 32px rgba(0,0,0,.1)}
-.allin-swipe-button:hover svg{transform:translate(2px,-2px)}
+.allin-buttons-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;width:100%;margin-top:16px}
+.allin-button-small{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:22px 18px;background:linear-gradient(180deg,#fff 0%,#f5f5f7 100%);border:1px solid rgba(0,0,0,.06);color:#1d1d1f;font-size:14px;font-weight:500;letter-spacing:-.015em;text-decoration:none;text-align:center;border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 4px 12px rgba(0,0,0,.06);cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;grid-column:span 1;aspect-ratio:1/1}
+.allin-button-small span{line-height:1.3}
+.allin-button-small svg{width:16px;height:16px;transition:transform .4s cubic-bezier(.16,1,.3,1);flex-shrink:0}
+.allin-button-small:hover{transform:translateY(-4px);box-shadow:0 4px 8px rgba(0,0,0,.06),0 16px 32px rgba(0,0,0,.1)}
+.allin-button-small:hover svg{transform:translate(2px,-2px)}
+.allin-button-big{grid-column:span 3;display:flex;align-items:center;justify-content:center;padding:24px 28px;background:linear-gradient(180deg,#1d1d1f 0%,#000 100%);border:1px solid rgba(255,255,255,.08);color:#fff;text-decoration:none;border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 4px 12px rgba(0,0,0,.1);cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;aspect-ratio:auto}
+.allin-button-big-content{display:flex;flex-direction:column;align-items:flex-start;gap:8px;width:100%}
+.allin-button-big-title{font-size:20px;font-weight:600;letter-spacing:-.025em;line-height:1.1;color:#fff}
+.allin-button-big-desc{font-size:13px;line-height:1.5;color:rgba(255,255,255,.7);letter-spacing:-.01em;margin-bottom:6px}
+.allin-button-big-cta{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:#fff;padding:10px 18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:999px;transition:all .3s cubic-bezier(.16,1,.3,1);margin-top:4px}
+.allin-button-big-cta svg{width:14px;height:14px;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.allin-button-big:hover{transform:translateY(-4px);box-shadow:0 4px 8px rgba(0,0,0,.08),0 16px 32px rgba(0,0,0,.16)}
+.allin-button-big:hover .allin-button-big-cta{background:rgba(255,255,255,.2);gap:10px}
+.allin-button-big:hover .allin-button-big-cta svg{transform:translateX(3px)}
 .allin-modal{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;font-family:inherit;-webkit-font-smoothing:antialiased}
 .allin-modal.allin-modal-active{display:flex}
 @keyframes aFI{from{opacity:0}to{opacity:1}}
@@ -51,8 +62,8 @@
 .allin-tab.allin-tab-active{background:#1d1d1f;color:#fff}
 .allin-tab:disabled{opacity:.35;cursor:not-allowed}
 @media (max-width:900px){.allin-cards-grid{grid-template-columns:repeat(4,1fr);gap:14px}}
-@media (max-width:720px){.allin-cards-grid{grid-template-columns:repeat(3,1fr);gap:12px}.allin-swipe-button{font-size:14px;padding:18px 20px}.allin-cover{padding:14px}.allin-cover-badge{width:26px;height:26px;font-size:10px}.allin-cover-tag{font-size:8px;padding:3px 6px}.allin-cover-watermark{font-size:120px}.allin-modal-box{position:relative;z-index:1;width:100%;max-width:460px;max-height:88vh;background:linear-gradient(180deg,#fff 0%,#fafafa 100%);border-radius:20px;padding:24px 30px 28px;box-sizing:border-box;color:#1d1d1f;box-shadow:0 0 0 1px rgba(0,0,0,.05),0 24px 64px rgba(0,0,0,.35);animation:aSU .5s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;overflow:hidden}.allin-modal-title{margin:0;font-size:19px;font-weight:600;color:#1d1d1f;line-height:1.1;letter-spacing:-.025em}.allin-modal-body{flex-direction:column;gap:20px}.allin-modal-right{flex:0 0 auto}.allin-modal-video-container{position:relative;width:100%;max-width:400px;margin:0 auto 14px;aspect-ratio:4/3;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.12);flex-shrink:0}}
-@media (max-width:480px){.allin-cards-grid{grid-template-columns:repeat(2,1fr);gap:10px}}`;
+@media (max-width:720px){.allin-cards-grid{grid-template-columns:repeat(3,1fr);gap:12px}.allin-buttons-grid{grid-template-columns:repeat(2,1fr);gap:12px}.allin-button-small{aspect-ratio:auto;padding:18px 14px;font-size:13px}.allin-button-big{grid-column:span 2;padding:20px 22px}.allin-button-big-title{font-size:18px}.allin-cover{padding:14px}.allin-cover-badge{width:26px;height:26px;font-size:10px}.allin-cover-tag{font-size:8px;padding:3px 6px}.allin-cover-watermark{font-size:120px}.allin-modal-box{position:relative;z-index:1;width:100%;max-width:460px;max-height:88vh;background:linear-gradient(180deg,#fff 0%,#fafafa 100%);border-radius:20px;padding:24px 30px 28px;box-sizing:border-box;color:#1d1d1f;box-shadow:0 0 0 1px rgba(0,0,0,.05),0 24px 64px rgba(0,0,0,.35);animation:aSU .5s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;overflow:hidden}.allin-modal-title{margin:0;font-size:19px;font-weight:600;color:#1d1d1f;line-height:1.1;letter-spacing:-.025em}.allin-modal-body{flex-direction:column;gap:20px}.allin-modal-right{flex:0 0 auto}.allin-modal-video-container{position:relative;width:100%;max-width:400px;margin:0 auto 14px;aspect-ratio:4/3;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.12);flex-shrink:0}}
+@media (max-width:480px){.allin-cards-grid{grid-template-columns:repeat(2,1fr);gap:10px}.allin-buttons-grid{grid-template-columns:1fr;gap:10px}.allin-button-small{aspect-ratio:auto;padding:16px;flex-direction:row;justify-content:space-between}.allin-button-big{grid-column:span 1}}`;
   var html=`<div class="allin-cards-wrapper"><div class="allin-cards-grid">
 <div class="allin-card allin-card-cover" onclick="allinOpen(0)">
 <div class="allin-cover">
@@ -654,7 +665,23 @@
 <div class="allin-cover-header"><div class="allin-cover-badge">100</div><div class="allin-cover-tag">Formato</div></div>
 <div class="allin-cover-footer"><div class="allin-cover-name">Lista</div><div class="allin-cover-cta"><span>Ver formato</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
 </div></div>
-<a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="allin-swipe-button"><span>Acesse a pasta de Swipe Files</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7V16" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<div class="allin-buttons-grid">
+<a href="#" target="_blank" rel="noopener noreferrer" class="allin-button-small allin-button-1">
+<span>Acesse a pasta de Swipe Files</span>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7V16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+<a href="#" target="_blank" rel="noopener noreferrer" class="allin-button-small allin-button-2">
+<span>Grupo de alunos no WhatsApp</span>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7V16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+<a href="#" target="_blank" rel="noopener noreferrer" class="allin-button-big allin-button-3">
+<div class="allin-button-big-content">
+<div class="allin-button-big-title">Conta com a gente</div>
+<div class="allin-button-big-desc">Nossa equipe escolhe os formatos certos pro seu perfil, edita, acompanha os dados e ajusta a estratégia com você.</div>
+<div class="allin-button-big-cta"><span>Falar com a equipe</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</a>
+</div>
 </div>
 
 <div class="allin-modal" id="allinModal">
