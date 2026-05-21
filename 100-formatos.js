@@ -4,7 +4,7 @@
   var css=`.popout.lesson__completion,[id^="popout_course_"]{display:none!important}
 .lg\\:col-span-2{grid-column:span 3/span 3!important}
 .allin-cards-wrapper{width:100%;max-width:100%;margin:24px auto;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Inter","Helvetica Neue",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.allin-cards-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;width:100%}
+.allin-cards-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px !important;width:100%}
 .allin-card{background:#fff;border-radius:18px;aspect-ratio:1/1;box-shadow:0 1px 2px rgba(0,0,0,.04),0 4px 12px rgba(0,0,0,.08);transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;position:relative;overflow:hidden}
 .allin-card:hover{transform:translateY(-4px);box-shadow:0 4px 8px rgba(0,0,0,.06),0 16px 32px rgba(0,0,0,.12)}
 .allin-card-cover{cursor:pointer;background:#fafafa;border:1px solid rgba(0,0,0,.06)}
@@ -21,7 +21,7 @@
 .allin-cover-cta svg{width:14px;height:14px;transition:transform .3s cubic-bezier(.16,1,.3,1)}
 .allin-card-cover:hover .allin-cover-cta{color:#1d1d1f;gap:10px}
 .allin-card-cover:hover .allin-cover-cta svg{transform:translateX(2px)}
-.allin-buttons-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;width:100%;margin-top:20px;align-items:stretch}
+.allin-buttons-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px !important;width:100%;margin-top:16px;align-items:stretch}
 
 /* Botões pequenos (compartilhado) */
 .allin-btn{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:14px;padding:20px;border-radius:18px;text-decoration:none;cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;grid-column:span 1;aspect-ratio:1/1;overflow:hidden;border:1px solid rgba(255,255,255,.06);box-shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.15)}
