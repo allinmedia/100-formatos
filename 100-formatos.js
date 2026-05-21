@@ -29,7 +29,12 @@
 .allin-modal.allin-modal-active{display:flex}
 @keyframes aFI{from{opacity:0}to{opacity:1}}
 .allin-modal-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);cursor:pointer}
-.allin-modal-box{position:relative;z-index:1;width:100%;max-width:560px;background:linear-gradient(180deg,#fff 0%,#fafafa 100%);border-radius:24px;padding:32px;overflow:hidden;box-sizing:border-box;color:#1d1d1f;box-shadow:0 0 0 1px rgba(0,0,0,.05),0 24px 64px rgba(0,0,0,.35);animation:aSU .5s cubic-bezier(.16,1,.3,1)}
+.allin-modal-box{position:relative;z-index:1;width:100%;max-width:880px;background:linear-gradient(180deg,#fff 0%,#fafafa 100%);border-radius:24px;padding:36px;overflow:hidden;box-sizing:border-box;color:#1d1d1f;box-shadow:0 0 0 1px rgba(0,0,0,.05),0 24px 64px rgba(0,0,0,.35);animation:aSU .5s cubic-bezier(.16,1,.3,1)}
+.allin-modal-body{display:flex;gap:32px;align-items:stretch}
+.allin-modal-left{flex:1;display:flex;flex-direction:column;min-width:0}
+.allin-modal-right{flex:0 0 280px;display:flex;flex-direction:column;gap:14px}
+.allin-modal-controls{display:flex;flex-direction:column;gap:12px}
+
 @keyframes aSU{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
 .allin-modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;background:rgba(0,0,0,.05);border:none;border-radius:50%;color:#1d1d1f;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s;z-index:2}
 .allin-modal-close svg{width:14px;height:14px}
@@ -37,11 +42,11 @@
 .allin-modal-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;margin-top:0}
 .allin-modal-badge{flex-shrink:0;width:40px;height:40px;background:#1d1d1f;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 1px 2px rgba(0,0,0,.12)}
 .allin-modal-title{margin:0;font-size:22px;font-weight:600;color:#1d1d1f;line-height:1.1;letter-spacing:-.025em}
-.allin-modal-desc{font-size:14px;line-height:1.5;color:#6e6e73;margin:0 0 20px 0;letter-spacing:-.01em}
+.allin-modal-desc{font-size:14px;line-height:1.55;color:#6e6e73;margin:0;letter-spacing:-.01em;flex:1}
 .allin-modal-label{font-size:11px;font-weight:600;color:#86868b;margin:0 0 10px 0;text-transform:uppercase;letter-spacing:.08em}
-.allin-modal-video-container{position:relative;width:100%;max-width:260px;margin:0 auto 16px;padding-bottom:46%;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.allin-modal-video-container{position:relative;width:100%;padding-bottom:177.78%;background:#000;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.12);flex:1}
 .allin-modal-video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}
-.allin-modal-dots{display:flex;justify-content:center;gap:6px;margin-bottom:14px}
+.allin-modal-dots{display:flex;justify-content:center;gap:6px;margin:0}
 .allin-dot{width:6px;height:6px;border-radius:50%;background:#d2d2d7;transition:all .3s}
 .allin-dot.allin-dot-active{background:#1d1d1f;transform:scale(1.2)}
 .allin-modal-tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
@@ -50,7 +55,7 @@
 .allin-tab.allin-tab-active{background:#1d1d1f;color:#fff}
 .allin-tab:disabled{opacity:.35;cursor:not-allowed}
 @media (max-width:900px){.allin-cards-grid{grid-template-columns:repeat(4,1fr);gap:14px}}
-@media (max-width:720px){.allin-cards-grid{grid-template-columns:repeat(3,1fr);gap:12px}.allin-swipe-button{font-size:14px;padding:18px 20px}.allin-cover{padding:14px}.allin-cover-badge{width:26px;height:26px;font-size:10px}.allin-cover-tag{font-size:8px;padding:3px 6px}.allin-cover-watermark{font-size:120px}.allin-modal-box{padding:28px 20px;border-radius:20px}.allin-modal-title{font-size:22px}}
+@media (max-width:720px){.allin-cards-grid{grid-template-columns:repeat(3,1fr);gap:12px}.allin-swipe-button{font-size:14px;padding:18px 20px}.allin-cover{padding:14px}.allin-cover-badge{width:26px;height:26px;font-size:10px}.allin-cover-tag{font-size:8px;padding:3px 6px}.allin-cover-watermark{font-size:120px}.allin-modal-box{padding:24px 20px;border-radius:20px;max-width:420px}.allin-modal-title{font-size:20px}.allin-modal-body{flex-direction:column;gap:20px}.allin-modal-right{flex:0 0 auto}.allin-modal-video-container{max-width:240px;margin:0 auto;padding-bottom:0;height:380px;flex:none}}
 @media (max-width:480px){.allin-cards-grid{grid-template-columns:repeat(2,1fr);gap:10px}}`;
   var html=`<div class="allin-cards-wrapper"><div class="allin-cards-grid">
 <div class="allin-card allin-card-cover" onclick="allinOpen(0)">
@@ -667,12 +672,19 @@
 <div class="allin-modal-overlay" onclick="allinClose()"></div>
 <div class="allin-modal-box">
 <button class="allin-modal-close" onclick="allinClose()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg></button>
+<div class="allin-modal-body">
+<div class="allin-modal-left">
 <div class="allin-modal-header"><div class="allin-modal-badge" id="aMB">01</div><h2 class="allin-modal-title" id="aMT"></h2></div>
 <p class="allin-modal-desc" id="aMD"></p>
-
+</div>
+<div class="allin-modal-right">
 <div class="allin-modal-video-container"><iframe id="aMI" src="" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>
+<div class="allin-modal-controls">
 <div class="allin-modal-dots" id="aDots"><span class="allin-dot allin-dot-active"></span><span class="allin-dot"></span><span class="allin-dot"></span></div>
 <div class="allin-modal-tabs"><button class="allin-tab allin-tab-active" onclick="allinSwitch(1)">Exemplo 1</button><button class="allin-tab" onclick="allinSwitch(2)">Exemplo 2</button><button class="allin-tab" onclick="allinSwitch(3)">Exemplo 3</button></div>
+</div>
+</div>
+</div>
 </div></div>`;
   var style=document.createElement('style');
   style.textContent=css;
