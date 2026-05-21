@@ -34,6 +34,9 @@
 .allin-btn-swipe .allin-btn-bigicon svg{color:#c9a84c;filter:drop-shadow(0 4px 20px rgba(201,168,76,.45))}
 .allin-btn-swipe .allin-btn-glow{background:radial-gradient(circle,rgba(201,168,76,.25) 0%,transparent 60%)}
 .allin-btn-swipe:hover .allin-btn-glow{background:radial-gradient(circle,rgba(201,168,76,.4) 0%,transparent 60%)}
+.allin-btn-whats .allin-btn-bigicon svg{color:#25D366;filter:drop-shadow(0 4px 20px rgba(37,211,102,.45))}
+.allin-btn-whats .allin-btn-glow{background:radial-gradient(circle,rgba(37,211,102,.25) 0%,transparent 60%)}
+.allin-btn-whats:hover .allin-btn-glow{background:radial-gradient(circle,rgba(37,211,102,.4) 0%,transparent 60%)}
 .allin-btn-text{display:flex;flex-direction:column;gap:4px;width:100%}
 .allin-btn-title{font-size:15px;font-weight:600;color:#fff;letter-spacing:-.015em;line-height:1.2}
 .allin-btn-sub{font-size:11px;font-weight:500;color:rgba(255,255,255,.6);letter-spacing:.01em;line-height:1.3}
@@ -44,8 +47,8 @@
 .allin-btn-swipe::before{content:"";position:absolute;top:-50%;right:-30%;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.15) 0%,transparent 70%);pointer-events:none}
 
 /* WhatsApp — verde oficial */
-.allin-btn-whats{background:linear-gradient(135deg,#25D366 0%,#128C7E 100%)}
-.allin-btn-whats::before{content:"";position:absolute;bottom:-40%;left:-20%;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12) 0%,transparent 70%);pointer-events:none}
+.allin-btn-whats{background:linear-gradient(135deg,#1a2620 0%,#15201b 55%,#0e1612 100%)}
+.allin-btn-whats::before{content:"";position:absolute;bottom:-40%;left:-20%;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(37,211,102,.15) 0%,transparent 70%);pointer-events:none}
 
 /* Botão Premium — Conta com a gente */
 .allin-btn-premium{position:relative;flex:3 1 0;min-width:0;height:auto;display:flex;flex-direction:column;justify-content:center;padding:28px 32px;background:linear-gradient(135deg,#1a1a1c 0%,#0a0a0a 100%);border:1px solid rgba(201,168,76,.2);color:#fff;text-decoration:none;border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.15),inset 0 1px 0 rgba(255,255,255,.04);cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;overflow:hidden}
