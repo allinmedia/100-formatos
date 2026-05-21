@@ -665,6 +665,7 @@
 <div class="allin-cover-header"><div class="allin-cover-badge">100</div><div class="allin-cover-tag">Formato</div></div>
 <div class="allin-cover-footer"><div class="allin-cover-name">Lista</div><div class="allin-cover-cta"><span>Ver formato</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
 </div></div>
+</div>
 <div class="allin-buttons-grid">
 <a href="#" target="_blank" rel="noopener noreferrer" class="allin-button-small allin-button-1">
 <span>Acesse a pasta de Swipe Files</span>
@@ -681,7 +682,6 @@
 <div class="allin-button-big-cta"><span>Falar com a equipe</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 </div>
 </a>
-</div>
 </div>
 
 <div class="allin-modal" id="allinModal">
