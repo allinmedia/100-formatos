@@ -21,7 +21,7 @@
 .allin-cover-cta svg{width:14px;height:14px;transition:transform .3s cubic-bezier(.16,1,.3,1)}
 .allin-card-cover:hover .allin-cover-cta{color:#1d1d1f;gap:10px}
 .allin-card-cover:hover .allin-cover-cta svg{transform:translateX(2px)}
-.allin-buttons-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;width:100%;margin-top:16px}
+.allin-buttons-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;width:100%;margin-top:16px;align-items:stretch}
 
 /* Botões pequenos (compartilhado) */
 .allin-btn{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:14px;padding:20px;border-radius:18px;text-decoration:none;cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;grid-column:span 1;aspect-ratio:1/1;overflow:hidden;border:1px solid rgba(255,255,255,.06);box-shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.15)}
@@ -45,10 +45,8 @@
 .allin-btn-whats .allin-btn-icon-wrap{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.15)}
 
 /* Botão Premium — Conta com a gente */
-.allin-btn-premium{position:relative;grid-column:span 3;display:flex;flex-direction:column;justify-content:space-between;padding:28px 32px;background:linear-gradient(135deg,#1a1a1c 0%,#0a0a0a 100%);border:1px solid rgba(201,168,76,.2);color:#fff;text-decoration:none;border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.3),0 8px 32px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.04);cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;overflow:hidden}
+.allin-btn-premium{position:relative;grid-column:span 3;height:100%;display:flex;flex-direction:column;justify-content:center;padding:28px 32px;background:linear-gradient(135deg,#1a1a1c 0%,#0a0a0a 100%);border:1px solid rgba(201,168,76,.2);color:#fff;text-decoration:none;border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.3),0 8px 32px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.04);cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;overflow:hidden}
 .allin-btn-premium::before{content:"";position:absolute;top:-50%;right:-20%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 60%);pointer-events:none;transition:opacity .5s}
-.allin-btn-premium-shimmer{position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent 0%,rgba(201,168,76,.08) 50%,transparent 100%);transform:skewX(-20deg);pointer-events:none;animation:allinShimmer 6s ease-in-out infinite}
-@keyframes allinShimmer{0%,100%{left:-100%}50%{left:200%}}
 .allin-btn-premium-content{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;height:100%;justify-content:center}
 .allin-btn-premium-brand{display:flex;align-items:center;gap:12px;margin-bottom:4px}
 .allin-btn-premium-logo{height:36px;width:auto;color:#fff}
@@ -706,7 +704,6 @@
 </div>
 </a>
 <a href="#" target="_blank" rel="noopener noreferrer" class="allin-btn-premium">
-<div class="allin-btn-premium-shimmer"></div>
 <div class="allin-btn-premium-content">
 <div class="allin-btn-premium-brand">
 <svg class="allin-btn-premium-logo" viewBox="0 0 200 75" xmlns="http://www.w3.org/2000/svg">
