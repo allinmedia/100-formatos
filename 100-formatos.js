@@ -24,32 +24,35 @@
 .allin-buttons-grid{display:flex !important;flex-direction:row !important;flex-wrap:nowrap !important;width:100%;margin-top:16px;align-items:stretch}
 
 /* Botões pequenos (compartilhado) */
-.allin-btn{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:14px;padding:20px;border-radius:18px;text-decoration:none;cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;flex:1 1 0;min-width:0;aspect-ratio:1/1;overflow:hidden;border:1px solid rgba(255,255,255,.06);box-shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.15);margin-right:16px}
-.allin-btn-icon-wrap{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08);flex-shrink:0;transition:transform .4s cubic-bezier(.16,1,.3,1)}
-.allin-btn-icon-wrap svg{width:20px;height:20px;color:#fff}
+.allin-btn{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:14px;padding:20px;border-radius:18px;text-decoration:none;cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;flex:1 1 0;min-width:0;aspect-ratio:1/1;overflow:hidden;border:1px solid rgba(255,255,255,.06);box-shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.15);margin-right:16px}
+
+.allin-btn-bigicon{position:relative;width:100%;flex:1;display:flex;align-items:center;justify-content:center;margin:6px 0}
+.allin-btn-bigicon svg{position:relative;z-index:2;width:64px;height:64px;color:#fff;filter:drop-shadow(0 4px 12px rgba(0,0,0,.25));transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.allin-btn-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.15) 0%,transparent 60%);pointer-events:none;transition:all .5s cubic-bezier(.16,1,.3,1);z-index:1}
+.allin-btn:hover .allin-btn-bigicon svg{transform:scale(1.1) rotate(-3deg)}
+.allin-btn:hover .allin-btn-glow{width:120px;height:120px;background:radial-gradient(circle,rgba(255,255,255,.22) 0%,transparent 60%)}
+.allin-btn-swipe .allin-btn-bigicon svg{color:#c9a84c;filter:drop-shadow(0 4px 16px rgba(201,168,76,.35))}
+.allin-btn-swipe .allin-btn-glow{background:radial-gradient(circle,rgba(201,168,76,.22) 0%,transparent 60%)}
+.allin-btn-swipe:hover .allin-btn-glow{background:radial-gradient(circle,rgba(201,168,76,.35) 0%,transparent 60%)}
 .allin-btn-text{display:flex;flex-direction:column;gap:4px;width:100%}
 .allin-btn-title{font-size:15px;font-weight:600;color:#fff;letter-spacing:-.015em;line-height:1.2}
 .allin-btn-sub{font-size:11px;font-weight:500;color:rgba(255,255,255,.6);letter-spacing:.01em;line-height:1.3}
 .allin-btn:hover{transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,.3),0 16px 40px rgba(0,0,0,.25)}
-.allin-btn:hover .allin-btn-icon-wrap{transform:scale(1.08)}
 
 /* Swipe Files — azul biblioteca + acento dourado */
 .allin-btn-swipe{background:linear-gradient(135deg,#1e3a5f 0%,#15294a 50%,#0f1f3a 100%)}
 .allin-btn-swipe::before{content:"";position:absolute;top:-50%;right:-30%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.18) 0%,transparent 70%);pointer-events:none}
-.allin-btn-swipe .allin-btn-icon-wrap{background:rgba(201,168,76,.15);border-color:rgba(201,168,76,.25)}
-.allin-btn-swipe .allin-btn-icon-wrap svg{color:#c9a84c}
 
 /* WhatsApp — verde oficial */
 .allin-btn-whats{background:linear-gradient(135deg,#25D366 0%,#128C7E 100%)}
 .allin-btn-whats::before{content:"";position:absolute;bottom:-40%;left:-20%;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12) 0%,transparent 70%);pointer-events:none}
-.allin-btn-whats .allin-btn-icon-wrap{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.15)}
 
 /* Botão Premium — Conta com a gente */
 .allin-btn-premium{position:relative;flex:3 1 0;min-width:0;height:auto;display:flex;flex-direction:column;justify-content:center;padding:28px 32px;background:linear-gradient(135deg,#1a1a1c 0%,#0a0a0a 100%);border:1px solid rgba(201,168,76,.2);color:#fff;text-decoration:none;border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.15),inset 0 1px 0 rgba(255,255,255,.04);cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;overflow:hidden}
 .allin-btn-premium::before{content:"";position:absolute;top:-50%;right:-20%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 60%);pointer-events:none;transition:opacity .5s}
 .allin-btn-premium-content{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;height:100%;justify-content:center}
 .allin-btn-premium-brand{display:flex;align-items:center;gap:12px;margin-bottom:4px}
-.allin-btn-premium-logo{height:36px;width:auto;color:#fff}
+.allin-btn-premium-logo{height:42px;width:auto;display:block;filter:brightness(0) invert(1)}
 .allin-btn-premium-tag{font-size:9px;font-weight:600;letter-spacing:.18em;color:#c9a84c;padding:4px 10px;border:1px solid rgba(201,168,76,.2);border-radius:999px;background:rgba(201,168,76,.06)}
 .allin-btn-premium-headline{font-size:22px;font-weight:600;letter-spacing:-.025em;line-height:1.1;color:#fff}
 .allin-btn-premium-desc{font-size:13px;line-height:1.5;color:rgba(255,255,255,.65);letter-spacing:-.01em;max-width:520px}
@@ -86,8 +89,8 @@
 
 .allin-buttons-grid > a:last-child{margin-right:0}
 @media (max-width:900px){.allin-cards-grid{grid-template-columns:repeat(4,1fr);gap:14px}}
-@media (max-width:720px){.allin-cards-grid{grid-template-columns:repeat(3,1fr);gap:12px}.allin-buttons-grid{flex-wrap:wrap !important}.allin-btn{aspect-ratio:auto;padding:18px;min-height:120px;flex:1 1 calc(50% - 16px);margin-right:12px}.allin-btn-premium{flex:1 1 100%;padding:22px 24px;margin-right:0}.allin-btn-premium-headline{font-size:20px}.allin-btn-premium-logo{height:32px}.allin-cover{padding:14px}.allin-cover-badge{width:26px;height:26px;font-size:10px}.allin-cover-tag{font-size:8px;padding:3px 6px}.allin-cover-watermark{font-size:120px}.allin-modal-box{position:relative;z-index:1;width:100%;max-width:460px;max-height:88vh;background:linear-gradient(180deg,#fff 0%,#fafafa 100%);border-radius:20px;padding:24px 30px 28px;box-sizing:border-box;color:#1d1d1f;box-shadow:0 0 0 1px rgba(0,0,0,.05),0 24px 64px rgba(0,0,0,.35);animation:aSU .5s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;overflow:hidden}.allin-modal-title{margin:0;font-size:19px;font-weight:600;color:#1d1d1f;line-height:1.1;letter-spacing:-.025em}.allin-modal-body{flex-direction:column;gap:20px}.allin-modal-right{flex:0 0 auto}.allin-modal-video-container{position:relative;width:100%;max-width:400px;margin:0 auto 14px;aspect-ratio:4/3;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.12);flex-shrink:0}}
-@media (max-width:480px){.allin-cards-grid{grid-template-columns:repeat(2,1fr);gap:10px}.allin-buttons-grid{flex-direction:column !important;flex-wrap:nowrap !important}.allin-btn{aspect-ratio:auto;padding:16px;min-height:auto;flex-direction:row;align-items:center;justify-content:flex-start;flex:1 1 100%;margin-right:0;margin-bottom:10px}.allin-btn-icon-wrap{width:38px;height:38px}.allin-btn-text{flex:1}.allin-btn-premium{flex:1 1 100%;padding:22px 20px;margin-right:0}.allin-btn-premium-headline{font-size:18px}.allin-btn-premium-logo{height:28px}}`;
+@media (max-width:720px){.allin-cards-grid{grid-template-columns:repeat(3,1fr);gap:12px}.allin-buttons-grid{flex-wrap:wrap !important}.allin-btn{aspect-ratio:auto;padding:18px;min-height:120px;flex:1 1 calc(50% - 16px);margin-right:12px}.allin-btn-premium{flex:1 1 100%;padding:22px 24px;margin-right:0}.allin-btn-premium-headline{font-size:20px}.allin-btn-premium-logo{height:36px}.allin-cover{padding:14px}.allin-cover-badge{width:26px;height:26px;font-size:10px}.allin-cover-tag{font-size:8px;padding:3px 6px}.allin-cover-watermark{font-size:120px}.allin-modal-box{position:relative;z-index:1;width:100%;max-width:460px;max-height:88vh;background:linear-gradient(180deg,#fff 0%,#fafafa 100%);border-radius:20px;padding:24px 30px 28px;box-sizing:border-box;color:#1d1d1f;box-shadow:0 0 0 1px rgba(0,0,0,.05),0 24px 64px rgba(0,0,0,.35);animation:aSU .5s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;overflow:hidden}.allin-modal-title{margin:0;font-size:19px;font-weight:600;color:#1d1d1f;line-height:1.1;letter-spacing:-.025em}.allin-modal-body{flex-direction:column;gap:20px}.allin-modal-right{flex:0 0 auto}.allin-modal-video-container{position:relative;width:100%;max-width:400px;margin:0 auto 14px;aspect-ratio:4/3;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.12);flex-shrink:0}}
+@media (max-width:480px){.allin-cards-grid{grid-template-columns:repeat(2,1fr);gap:10px}.allin-buttons-grid{flex-direction:column !important;flex-wrap:nowrap !important}.allin-btn{aspect-ratio:auto;padding:16px;min-height:auto;flex-direction:row;align-items:center;justify-content:flex-start;flex:1 1 100%;margin-right:0;margin-bottom:10px}.allin-btn-icon-wrap{width:38px;height:38px}.allin-btn-text{flex:1}.allin-btn-premium{flex:1 1 100%;padding:22px 20px;margin-right:0}.allin-btn-premium-headline{font-size:18px}.allin-btn-premium-logo{height:32px}}`;
   var html=`<div class="allin-cards-wrapper"><div class="allin-cards-grid">
 <div class="allin-card allin-card-cover" onclick="allinOpen(0)">
 <div class="allin-cover">
@@ -692,14 +695,14 @@
 </div>
 <div class="allin-buttons-grid">
 <a href="#" target="_blank" rel="noopener noreferrer" class="allin-btn allin-btn-swipe">
-<div class="allin-btn-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5h4l2 2h7A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10z"/><path d="M7 12h10M7 15.5h6"/></svg></div>
+<div class="allin-btn-bigicon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18a4 4 0 0 1 4-4h10l4 5h22a4 4 0 0 1 4 4v23a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V18z"/><path d="M18 32h28M18 40h20"/></svg><div class="allin-btn-glow"></div></div>
 <div class="allin-btn-text">
 <div class="allin-btn-title">Swipe Files</div>
 <div class="allin-btn-sub">Biblioteca de referências</div>
 </div>
 </a>
 <a href="#" target="_blank" rel="noopener noreferrer" class="allin-btn allin-btn-whats">
-<div class="allin-btn-icon-wrap"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.379.692 4.595 1.886 6.466L4 29l7.752-1.852A11.93 11.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16.001 3zm0 21.818c-1.755 0-3.4-.473-4.815-1.296l-.345-.205-4.082.975.965-3.987-.224-.357A9.764 9.764 0 0 1 6.182 15c0-5.42 4.4-9.818 9.819-9.818 5.42 0 9.818 4.4 9.818 9.818 0 5.42-4.4 9.818-9.818 9.818zm5.39-7.347c-.295-.148-1.746-.862-2.017-.96-.27-.099-.467-.148-.665.148-.197.295-.762.96-.935 1.158-.172.197-.345.222-.64.074-.295-.148-1.247-.46-2.376-1.466-.878-.783-1.47-1.75-1.643-2.045-.172-.295-.018-.455.13-.602.133-.132.295-.345.443-.517.148-.172.197-.295.295-.492.099-.197.05-.37-.025-.517-.074-.148-.665-1.605-.911-2.198-.24-.578-.484-.5-.665-.51l-.566-.01c-.197 0-.517.074-.787.37-.27.295-1.034 1.01-1.034 2.463 0 1.454 1.058 2.858 1.205 3.054.148.197 2.083 3.181 5.045 4.46.706.305 1.256.487 1.685.624.708.225 1.353.193 1.863.117.568-.085 1.746-.713 1.991-1.4.246-.689.246-1.28.172-1.4-.074-.122-.27-.197-.566-.345z"/></svg></div>
+<div class="allin-btn-bigicon"><svg viewBox="0 0 64 64" fill="currentColor"><path d="M32 6C17.64 6 6 17.64 6 32c0 5.16 1.5 9.96 4.09 14.01L6 58l12.3-3.99A25.86 25.86 0 0 0 32 58c14.36 0 26-11.64 26-26S46.36 6 32 6zm0 47.27c-3.8 0-7.37-1.03-10.43-2.81l-.75-.44-8.85 2.11 2.09-8.64-.49-.77A21.16 21.16 0 0 1 10.74 32c0-11.75 9.54-21.27 21.28-21.27 11.75 0 21.28 9.54 21.28 21.27 0 11.75-9.54 21.27-21.28 21.27zm11.68-15.92c-.64-.32-3.78-1.87-4.37-2.08-.59-.21-1.01-.32-1.44.32-.43.64-1.65 2.08-2.03 2.51-.37.43-.75.48-1.39.16-.64-.32-2.7-.99-5.15-3.18-1.9-1.7-3.18-3.79-3.56-4.43-.37-.64-.04-.99.28-1.31.29-.29.64-.75.96-1.12.32-.37.43-.64.64-1.07.21-.43.11-.8-.05-1.12-.16-.32-1.44-3.47-1.97-4.76-.52-1.25-1.05-1.08-1.44-1.1-.37-.02-.8-.02-1.23-.02-.43 0-1.12.16-1.71.8-.59.64-2.24 2.19-2.24 5.34 0 3.15 2.3 6.2 2.62 6.62.32.43 4.51 6.89 10.93 9.66 1.53.66 2.72 1.06 3.65 1.35 1.53.49 2.93.42 4.03.25 1.23-.18 3.78-1.55 4.31-3.04.53-1.49.53-2.77.37-3.04-.16-.27-.59-.43-1.23-.75z"/></svg><div class="allin-btn-glow"></div></div>
 <div class="allin-btn-text">
 <div class="allin-btn-title">Grupo de Alunos</div>
 <div class="allin-btn-sub">Comunidade no WhatsApp</div>
@@ -708,9 +711,7 @@
 <a href="#" target="_blank" rel="noopener noreferrer" class="allin-btn-premium">
 <div class="allin-btn-premium-content">
 <div class="allin-btn-premium-brand">
-<svg class="allin-btn-premium-logo" viewBox="0 0 200 75" xmlns="http://www.w3.org/2000/svg">
-<text x="100" y="55" text-anchor="middle" font-family="Brush Script MT, cursive" font-size="56" font-weight="400" fill="currentColor" font-style="italic">All In</text>
-</svg>
+<img class="allin-btn-premium-logo" src="https://allinmedia.github.io/100-formatos/Logotipo2.png" alt="All In Media" />
 <div class="allin-btn-premium-tag">SERVIÇO</div>
 </div>
 <div class="allin-btn-premium-headline">Conta com a gente</div>
