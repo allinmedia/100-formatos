@@ -24,7 +24,7 @@
 .allin-buttons-grid{display:grid !important;grid-template-columns:repeat(5,1fr) !important;column-gap:16px !important;row-gap:16px !important;gap:16px !important;width:100%;margin-top:16px;align-items:stretch}
 
 /* Botões pequenos (compartilhado) */
-.allin-btn{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:14px;padding:20px;border-radius:18px;text-decoration:none;cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;grid-column:span 1;aspect-ratio:1/1;overflow:hidden;border:1px solid rgba(255,255,255,.06);box-shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.15)}
+.allin-btn{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:14px;padding:20px;border-radius:18px;text-decoration:none;cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;grid-column:span 1;aspect-ratio:1/1;overflow:hidden;border:8px solid transparent;background-clip:padding-box;box-shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.15)}
 .allin-btn-icon-wrap{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08);flex-shrink:0;transition:transform .4s cubic-bezier(.16,1,.3,1)}
 .allin-btn-icon-wrap svg{width:20px;height:20px;color:#fff}
 .allin-btn-text{display:flex;flex-direction:column;gap:4px;width:100%}
@@ -45,7 +45,7 @@
 .allin-btn-whats .allin-btn-icon-wrap{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.15)}
 
 /* Botão Premium — Conta com a gente */
-.allin-btn-premium{position:relative;grid-column:span 3;height:100%;display:flex;flex-direction:column;justify-content:center;padding:28px 32px;background:linear-gradient(135deg,#1a1a1c 0%,#0a0a0a 100%);border:1px solid rgba(201,168,76,.2);color:#fff;text-decoration:none;border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.15),inset 0 1px 0 rgba(255,255,255,.04);cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;overflow:hidden}
+.allin-btn-premium{position:relative;grid-column:span 3;height:100%;display:flex;flex-direction:column;justify-content:center;padding:28px 32px;background:linear-gradient(135deg,#1a1a1c 0%,#0a0a0a 100%);border:8px solid transparent;background-clip:padding-box;color:#fff;text-decoration:none;border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.15),inset 0 0 0 1px rgba(201,168,76,.2),inset 0 1px 0 rgba(255,255,255,.04);cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);box-sizing:border-box;overflow:hidden}
 .allin-btn-premium::before{content:"";position:absolute;top:-50%;right:-20%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 60%);pointer-events:none;transition:opacity .5s}
 .allin-btn-premium-content{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;height:100%;justify-content:center}
 .allin-btn-premium-brand{display:flex;align-items:center;gap:12px;margin-bottom:4px}
