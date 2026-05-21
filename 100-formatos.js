@@ -407,7 +407,7 @@
 <div class="allin-cover-watermark">59</div>
 <div class="allin-cover-header"><div class="allin-cover-badge">59</div><div class="allin-cover-tag">Formato</div></div>
 <div class="allin-cover-footer"><div class="allin-cover-name">Certo x Errado</div><div class="allin-cover-cta"><span>Ver formato</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
-</div>
+</div></div>
 <div class="allin-card allin-card-cover" onclick="allinOpen(59)">
 <div class="allin-cover">
 <div class="allin-cover-watermark">60</div>
@@ -654,7 +654,6 @@
 <div class="allin-cover-header"><div class="allin-cover-badge">100</div><div class="allin-cover-tag">Formato</div></div>
 <div class="allin-cover-footer"><div class="allin-cover-name">Lista</div><div class="allin-cover-cta"><span>Ver formato</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
 </div></div>
-</div>
 <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="allin-swipe-button"><span>Acesse a pasta de Swipe Files</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7V16" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div>
 
